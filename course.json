@@ -76,7 +76,8 @@
     "photos_root": "course_photos",
     "progress": "progress",
     "flyovers": "~/Documents/Penmar/flyovers",
-    "backups": "~/Documents/Penmar/Backups"
+    "backups": "~/Documents/Penmar/Backups",
+    "photo_store": "r2://penmar"
   },
   "gps": {
     "magnetic_declination_deg": 12.0,
