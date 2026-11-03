@@ -77,7 +77,8 @@
     "progress": "progress",
     "flyovers": "~/Documents/Penmar/flyovers",
     "backups": "~/Documents/Penmar/Backups",
-    "photo_store": "r2://penmar"
+    "photo_store": "r2://penmar",
+    "photo_store_account": "db5ab79ca4e0a0748aff45e85449b1c1"
   },
   "gps": {
     "magnetic_declination_deg": 12.0,
