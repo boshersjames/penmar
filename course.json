@@ -1,0 +1,102 @@
+{
+  "name": "penmar",
+  "center_lat": 34.006361815492475,
+  "center_lon": -118.45934403652178,
+  "size": 2000.0,
+  "epsg": 6340,
+  "arcgis_wkid": 26911,
+  "utm_zone": 11,
+  "sw_e": 364237.29,
+  "sw_n": 3762821.35,
+  "y_offset": 4.0,
+  "lidar_survey": "CA_LosAngeles_1_B23",
+  "terrain_height": 43.0,
+  "club": "Penmar Golf Course",
+  "gkd": {
+    "Location": "Venice, California, USA",
+    "CityTown": "Los Angeles",
+    "StateCountyProvince": "California",
+    "Country": "USA",
+    "Designer": "jboshers",
+    "altitudeV2": 30.0,
+    "altitude": 0.0,
+    "unitOfMeasure": 2,
+    "WindDirectionDefault": 250.0,
+    "WindStrengthDefault": 2,
+    "KeywordsString": "Parkland",
+    "CourseInfo": "Penmar Golf Course is a Los Angeles municipal nine-hole course in Venice, opened in 1962. It plays here as 18 holes (par 66), with the second nine from alternate tees. Tall pines and eucalyptus line its tight fairways. Penmar made headlines in March 2015, when Harrison Ford made an emergency landing on the course in his vintage Ryan PT-22 after an engine failure on takeoff from Santa Monica. Look for the plane near the 8th tee."
+  },
+  "display_name": "Penmar Golf Course",
+  "location": "Venice, Los Angeles, California, USA",
+  "designer_field": "jboshers",
+  "frame": {
+    "square_m": 2000.0,
+    "heightmap_px": 2049,
+    "crs": "EPSG:6340",
+    "sw_corner": [
+      364237.29,
+      3762821.35
+    ],
+    "centre_latlon": [
+      34.006361815492475,
+      -118.45934403652178
+    ],
+    "base_elevation_m": 4.0,
+    "relief_m": 43.0,
+    "axes": "x = m east of SW corner, z = m north, y = elevation - 4"
+  },
+  "lidar": {
+    "survey": "CA_LosAngeles_1_B23",
+    "quality_level": 1,
+    "pts_per_m2": 17.2
+  },
+  "satellite": {
+    "source": "NAIP",
+    "px": 4096,
+    "m_per_px": 0.49
+  },
+  "holes": 18,
+  "holes_physical": 9,
+  "visit": "none",
+  "control_hole": null,
+  "paths": {
+    "toolkit": "../course-build",
+    "unity_project": "C:/GSP/Penmar_Project",
+    "unity_scene": "Penmar.unity",
+    "unity_editor_dir": "C:/GSP/Penmar_Project/Assets/Editor",
+    "automation_output": "C:/GSP/Penmar_Project/AutomationOutput",
+    "gspro_courses": "C:/GSProV1/Core/GSP/Courses",
+    "course_repo": ".",
+    "heightmap": "heightmap_2049.raw",
+    "gkd": "Penmar.GKD",
+    "course_svg": "course.svg",
+    "satellite": "satellite.jpg",
+    "trees_csv": "trees.csv",
+    "signs": "progress/hole_signs.json",
+    "photos_root": "course_photos",
+    "progress": "progress",
+    "flyovers": "~/Documents/Penmar/flyovers",
+    "backups": "~/Documents/Penmar/Backups"
+  },
+  "gps": {
+    "magnetic_declination_deg": 12.0,
+    "note": "EXIF compass is magnetic; +12 deg to true in Los Angeles County (2026)"
+  },
+  "tee_slot_map": {
+    "Blue": "Blue",
+    "White": "White",
+    "Gold": "Yellow"
+  },
+  "shared_tee_box_exceptions": [],
+  "rule_overrides": {},
+  "notes": [
+    "course.json carries both coursekit's keys (size, sw_e, sw_n, y_offset, epsg, terrain_height, lidar_survey, gkd) and the toolkit's (frame, paths, lidar, holes, gps); keep both in step.",
+    "9 physical holes played as 18 in the GKD (--repeat-nine): holes 10-18 replay 1-9 from the Alt tees. holes = 18 enabled GKD holes; holes_physical = 9.",
+    "heightmap_2049.raw was rebuilt from USGS 3DEP in the cloud (coursekit.py lidar --ept CA_LosAngeles_1_B23, then coursekit.py heightmap); points.npz and ept_cache/ are not in git.",
+    "Greens are flat with no break (James): keep green surfaces flat, do not add shaping. Rough plays rough; tree lines between holes are playable (no interior OB).",
+    "OB = the OSM course boundary pulled in 1.5 m (the 12 ft chain-link fence, fences.csv). 100 ft nets in nets.csv (hole 3 green, hole 2 road side).",
+    "Alt tees with no mapped OSM box stand on flat pads in course.svg (alt_tee_pads.py): 12 Gold, 14 White/Gold, 15 Gold, all on 16 and 18. Check those.",
+    "props.csv: Harrison Ford's Ryan PT-22 between the hole 8 tees; restroom between the 3 and 5 greens (location to confirm).",
+    "map.osm.xml is the OSM export in plain git; copy to map.osm before running coursekit."
+  ]
+}
